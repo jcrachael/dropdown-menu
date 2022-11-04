@@ -12,10 +12,13 @@ header {
     text-align: center;
 }
 
-main {
+
+
+/* DROPDOWN MENUS */
+
+#dropdown-container {
     display: flex;
     justify-content: space-around;
-    
 }
 
 .drop-down {
@@ -24,11 +27,11 @@ main {
     height: 180px;
     width: 200px;
     padding: 0;
-    transition: height 0.2s ease;
-
+    transition: 0.3s;
+    z-index: 1;
 }
 
-button {
+.dropdown-btn {
     width: 200px;
     height: 30px;
     background: none;
@@ -40,22 +43,207 @@ button {
     font-size: 12pt;
 }
 
-button:hover {
+.dropdown-btn:hover {
     background-color: cornflowerblue;
     color: #fff;
 }
 
-.closed {
+.dropdown-closed {
     height: 33px;
 }
 
-li {
+.dropdown-li {
     height: 35px;
 }
 
+
+
+/* MOBILE MENUS */
+
+#mobile-menus-header {
+    margin-top: 75px;
+}
+
+.hamburger-nav > p {
+    font-size: 16pt;
+    color: #fff;
+    height: 30px;
+    margin-top: 30px;
+}
+
+
+#mobile-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mobile {
+    width: 275px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.1s ease;
+}
+
+.material-symbols-outlined:hover {
+    opacity: 1;
+  }
+
+
+.hamburger {
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    width: 200px;
+}
+
+.hamburger-nav {
+    width: 0;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    color: #818181;
+}
+
+.hamburger-nav .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 20pt;
+    color: #818181;
+    transition: 0.2s ease;
+}
+
+.hamburger-nav .close-btn:hover {
+    color: #f1f1f1;
+}
+
+.hamburger-li {
+    margin-left: 15px;
+    height: 38px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hamburger-li:hover {
+    color: #f1f1f1;
+}
+
+
+/* IMAGE SLIDER CAROUSEL */
+
+#carousel-header {
+    margin-top: 75px;
+}
+
+#carousel-main > * {
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    margin: auto;
+    position: relative;
+    width: 1000px;
+    padding-bottom: 50px;
+    
+}
+
+.carousel-container > * {
+    transition: all 0.2s;
+}
+
+.slide {
+    display: none;
+}
+
+.slide > img {
+    height: 600px;
+    width: 100%;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20pt;
+    border-radius: 0 3px 3px 0;
+
+}
+
+#next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#prev:hover, #next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12pt;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+    width: 100%;
+    height: 100px;
+    transition: all 0.2s;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+/* FOOTER */
+
 footer {
     font-size: small;
-    position: absolute;
+    position: fixed;
     bottom: 5px;
     width: calc(100vw - 10px);
     text-align: center;

@@ -1,10 +1,13 @@
 import './style.css';
 
-const navs = document.querySelectorAll('.nav-btn');
+import dropDown from './dropdown-menu';
+import hamburger from './hamburger-menu';
+import carousel from './carousel';
 
-for (let i = 0; i < navs.length; i++) {
-    navs[i].addEventListener('click', function() {
-        this.parentElement.classList.toggle('closed');
-    });
-}
+dropDown();
+hamburger();
+carousel();
+
+
+
 

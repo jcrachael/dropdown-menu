@@ -4,7 +4,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     // set the mode (production or development)
-    mode: 'development',
+    mode: 'production',
 
     // set entry
     entry: { 
@@ -21,7 +21,7 @@ module.exports = {
     },
 
     // dev server
- 
+    devtool: 'source-map',
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist')
